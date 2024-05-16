@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/RootNode/3529212410_2185682929_223132457.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/RootNode/3040924799_1141282389_3508714057.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/RootNode/3040924799_2994042306_2441847141.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/RootNode/3040924799_1639475225_4131132508.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/RootNode/3040924799_929215397_1038110436.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/RootNode/3040924799_1141282389_1008575443.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/RootNode/3040924799_3142353997_1464269138.mp4'

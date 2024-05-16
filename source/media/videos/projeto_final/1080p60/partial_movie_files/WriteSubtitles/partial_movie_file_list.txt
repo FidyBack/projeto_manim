@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/WriteSubtitles/3529212410_2185682929_223132457.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/WriteSubtitles/3040924799_2661846767_2535566070.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/WriteSubtitles/3040924799_2475379470_982402818.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/WriteSubtitles/3040924799_2873632906_1249342171.mp4'

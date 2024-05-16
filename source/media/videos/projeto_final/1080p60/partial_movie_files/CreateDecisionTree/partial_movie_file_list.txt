@@ -1,0 +1,11 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/CreateDecisionTree/3529212410_2185682929_223132457.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/CreateDecisionTree/3040924799_3890345977_3508714057.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/CreateDecisionTree/3040924799_908566809_2441847141.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/CreateDecisionTree/3040924799_487613015_2441847141.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/CreateDecisionTree/3040924799_3890345977_1031718181.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/CreateDecisionTree/3040924799_1639475225_4170547671.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/CreateDecisionTree/3040924799_3942254077_3094088684.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/CreateDecisionTree/3040924799_3890345977_2218112955.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/CreateDecisionTree/3040924799_1266951341_3807540760.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_2/media/videos/projeto_final/1080p60/partial_movie_files/CreateDecisionTree/3040924799_3890345977_2801400609.mp4'
