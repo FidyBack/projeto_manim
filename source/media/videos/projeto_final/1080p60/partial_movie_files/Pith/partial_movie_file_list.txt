@@ -1,0 +1,3 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_manim/source/media/videos/projeto_final/1080p60/partial_movie_files/Pith/3977891868_2658674110_223132457.mp4'
+file 'file:D:/Insper/!11_2024_1/Machine_Learning/Projetos/projeto_manim/source/media/videos/projeto_final/1080p60/partial_movie_files/Pith/2852726489_1704852926_2498695431.mp4'
