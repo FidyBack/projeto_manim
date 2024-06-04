@@ -1,65 +1,25 @@
 from manim import *
-
-# class SquareToCircle(Scene):
-#     def construct(self):
-#         circle = Circle()  # create a circle
-#         circle.set_fill(PINK, opacity=0.5)  # set color and transparency
-
-#         square = Square()  # create a square
-#         square.rotate(PI / 4)  # rotate a certain amount
-
-#         self.play(Create(square))  # animate the creation of the square
-#         self.play(Transform(square, circle))  # interpolate the square into the circle
-#         self.play(FadeOut(square))  # fade out animation
+from manim_voiceover import VoiceoverScene
+from manim_voiceover.services.elevenlabs import ElevenLabsService
 
 
-# class AnimatedSquareToCircle(Scene):
-#     def construct(self):
-#         circle = Circle()  # create a circle
-#         square = Square()  # create a square
-
-#         self.play(Create(square))  # show the square on screen
-#         self.play(square.animate.flip(UP))
-#         self.play(Transform(square, circle))  # rotate and transform the square into a circle simultaneously
-#         self.play(
-#             square.animate.set_fill(PINK, opacity=0.5)
-#         )  # color the circle on screen
-
-# class DifferentRotations(Scene):
-#     def construct(self):
-#         left_square = Square(color=BLUE, fill_opacity=0.7).shift(2 * LEFT)
-#         right_square = Square(color=GREEN, fill_opacity=0.7).shift(2 * RIGHT)
-#         self.play(
-#             left_square.animate.rotate(PI), Rotate(right_square, angle=PI), run_time=2
-#         )
-#         self.wait()
-
-# class TwoTransforms(Scene):
-#     def transform(self):
-#         a = Circle()
-#         b = Square()
-#         c = Triangle()
-#         self.play(Transform(a, b))
-#         self.play(Transform(a, c))
-#         self.play(FadeOut(a))
-
-#     def replacement_transform(self):
-#         a = Circle()
-#         b = Square()
-#         c = Triangle()
-#         self.play(ReplacementTransform(a, b))
-#         self.play(ReplacementTransform(b, c))
-#         self.play(FadeOut(c))
-
-#     def construct(self):
-#         self.transform()
-#         self.wait(0.5)  # wait for 0.5 seconds
-#         self.replacement_transform()
-
-
-# Create a class that calls the DecisionTree class, and the creates a decision tree with a root node
-class CreateDecisionTree(Scene):
+class CreateDecisionTree(VoiceoverScene):
     def construct(self):
+        # Voice Configuration
+        self.set_speech_service(
+            ElevenLabsService(
+                voice_name="Adam",
+                voice_settings={"stability": 0.001, "similarity_boost": 0.25},
+            )
+        )
+
+        circle = Circle()
+        square = Square().shift(2 * RIGHT)
+
+        with self.voiceover(text="This circle is drawn as I speak.") as tracker:
+            self.play(Create(circle), run_time=tracker.duration)
+
+
         # Parte 1 - Introdução
         text_intro = Text("Criando uma Árvore de Decisão")
         self.play(Write(text_intro))
@@ -67,47 +27,47 @@ class CreateDecisionTree(Scene):
         self.play(text_intro.animate.scale(0.5))
         self.play(text_intro.animate.to_edge(UP * 0.5))
 
-        plane = self.create_graph()
-        points = [
-            (140, 2.15, RED),
-            (130, 1.70, BLUE),
-            (79, 1.70, GREEN),
-            (65, 1.72, GREEN),
-            (120, 1.70, BLUE),
-            (125, 1.75, BLUE),
-            (120, 2.05, RED),
-            (75, 1.79, GREEN),
-            (115, 1.95, RED),
-        ]
-        self.add_points_to_graph(plane, points)
+        # plane = self.create_graph()
+        # points = [
+        #     (140, 2.15, RED),
+        #     (130, 1.70, BLUE),
+        #     (79, 1.70, GREEN),
+        #     (65, 1.72, GREEN),
+        #     (120, 1.70, BLUE),
+        #     (125, 1.75, BLUE),
+        #     (120, 2.05, RED),
+        #     (75, 1.79, GREEN),
+        #     (115, 1.95, RED),
+        # ]
+        # self.add_points_to_graph(plane, points)
 
-        tree = self.create_fisrt_tree(points)
+        # tree = self.create_fisrt_tree(points)
 
-        # Parte 2 - Como funciona
-        self.clear_screen()
-        self.wait(0.5)
+        # # Parte 2 - Como funciona
+        # self.clear_screen()
+        # self.wait(0.5)
 
-        impurity_text = Text("Medidas de Impureza")
-        self.play(Write(impurity_text))
-        self.wait()
-        self.play(impurity_text.animate.scale(0.5))
-        self.play(impurity_text.animate.to_edge(UP * 0.5))
+        # impurity_text = Text("Medidas de Impureza")
+        # self.play(Write(impurity_text))
+        # self.wait()
+        # self.play(impurity_text.animate.scale(0.5))
+        # self.play(impurity_text.animate.to_edge(UP * 0.5))
 
-        self.play(Create(tree))
-        self.wait()
+        # self.play(Create(tree))
+        # self.wait()
 
-        self.add_proportions(tree)
+        # self.add_proportions(tree)
 
-        # Parte 3 - Equações
-        self.clear_screen()
-        self.wait(0.5)
+        # # Parte 3 - Equações
+        # self.clear_screen()
+        # self.wait(0.5)
         
-        impurity_math_text = Text("Calculo de Impureza")
-        impurity_math_text.shift(UP * 2)
-        self.play(Write(impurity_math_text))
-        self.wait()
-        self.create_equations(impurity_math_text)
-        self.wait(3)
+        # impurity_math_text = Text("Calculo de Impureza")
+        # impurity_math_text.shift(UP * 2)
+        # self.play(Write(impurity_math_text))
+        # self.wait()
+        # self.create_equations(impurity_math_text)
+        # self.wait(3)
 
 
     def create_graph(self):
