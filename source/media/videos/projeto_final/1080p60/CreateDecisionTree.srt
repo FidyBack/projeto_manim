@@ -1,0 +1,172 @@
+1
+00:00:00,000 --> 00:00:02,358
+Neste vídeo, vamos mostrar como é o
+
+2
+00:00:02,458 --> 00:00:05,098
+funcionamento de uma árvore de decisão.
+
+3
+00:00:05,700 --> 00:00:09,213
+Iremos explicar como ela é criada, como funciona
+
+4
+00:00:09,313 --> 00:00:12,600
+e como são calculadas as medidas de impureza.
+
+5
+00:00:15,200 --> 00:00:17,700
+Vamos primeiro criar uma pequena base de
+
+6
+00:00:17,800 --> 00:00:20,951
+dados para exemplificar o funcionamento da árvore.
+
+7
+00:00:21,566 --> 00:00:25,649
+A base de dados é composta por 3 classes: Basquete, Sumô e
+
+8
+00:00:25,749 --> 00:00:30,698
+Jockey.Cada classe é representada por um ponto no gráfico, onde o eixo
+
+9
+00:00:30,798 --> 00:00:34,736
+horizontal representa o peso e o eixo vertical a altura.
+
+10
+00:00:35,333 --> 00:00:38,703
+A partir deste gráfico, vamos criar uma árvore de decisão
+
+11
+00:00:38,803 --> 00:00:42,234
+que irá classificar os pontos em suas respectivas classes.
+
+12
+00:00:42,833 --> 00:00:46,591
+Vamos começar criando a raiz da árvore. A raiz
+
+13
+00:00:46,691 --> 00:00:50,700
+irá classificar os pontos de acordo com a altura.
+
+14
+00:00:51,300 --> 00:00:53,864
+Se a altura do ponto for maior que 1 e
+
+15
+00:00:53,964 --> 00:00:56,528
+90, o ponto irá para o nó da esquerda.
+
+16
+00:00:57,116 --> 00:01:00,255
+Casos contrário, o ponto irá para o da direita.
+
+17
+00:01:00,850 --> 00:01:04,955
+No nó da direita, os pontos serão classificados de acordo com o peso.
+
+18
+00:01:05,550 --> 00:01:09,211
+Se o peso for maior que 100, o ponto irá para o nó da esquerda.
+
+19
+00:01:09,800 --> 00:01:12,651
+Caso contrário, o ponto irá para a direita.
+
+20
+00:01:13,250 --> 00:01:16,002
+Após este processo, é possível classificar
+
+21
+00:01:16,102 --> 00:01:18,583
+os pontos em suas respectivas classes.
+
+22
+00:01:19,183 --> 00:01:22,682
+Os pontos vermelhos são classificados como Basquete, os
+
+23
+00:01:22,782 --> 00:01:25,300
+azuis como Sumô e os verdes como Jockey.
+
+24
+00:01:25,900 --> 00:01:29,102
+Vimos como é feito a classificação dos pontos em uma
+
+25
+00:01:29,202 --> 00:01:32,722
+árvore de decisão. Mas como os parâmetros são escolhidos?
+
+26
+00:01:33,316 --> 00:01:36,142
+Isso é feito com base em medidas de impureza.
+
+27
+00:01:36,733 --> 00:01:41,314
+As medidas de impureza são utilizadas para calcular a pureza
+
+28
+00:01:41,414 --> 00:01:44,904
+dos nós da árvore: quanto mais puro o nó, mais
+
+29
+00:01:45,004 --> 00:01:48,571
+homogênea é a classe dos pontos que estão nele.
+
+30
+00:01:51,166 --> 00:01:54,153
+Vamos pegar a árvore que criamos anteriormente e
+
+31
+00:01:54,253 --> 00:01:56,918
+calcular as medidas de impureza de cada nó.
+
+32
+00:01:57,516 --> 00:02:00,664
+No primeiro nó, temos uma proporção igual de
+
+33
+00:02:00,764 --> 00:02:03,764
+pontos de cada classe: um terço para cada.
+
+34
+00:02:04,350 --> 00:02:07,319
+Porém, conforme descemos na árvore, a proporção
+
+35
+00:02:07,419 --> 00:02:09,343
+dos pontos de cada classe muda.
+
+36
+00:02:09,933 --> 00:02:13,373
+No segundo nó, todos os pontos são da classe Basquete,
+
+37
+00:02:13,473 --> 00:02:16,651
+sendo esse o estado mais puro possível para um nó.
+
+38
+00:02:17,250 --> 00:02:19,630
+No terceiro nó, temos uma proporção igual
+
+39
+00:02:19,730 --> 00:02:21,747
+de pontos das classes Sumô e Jockey
+
+40
+00:02:22,333 --> 00:02:24,727
+Nos últimos nós, todos os pontos são da
+
+41
+00:02:24,827 --> 00:02:27,797
+mesma classe, sendo o estado mais puro possível.
+
+42
+00:02:28,383 --> 00:02:31,994
+Assim, é possível reparar que, conforme descemos na
+
+43
+00:02:32,094 --> 00:02:34,395
+árvore, maior é a pureza dos nós.
+
