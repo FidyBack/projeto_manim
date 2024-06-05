@@ -1,172 +1,236 @@
 1
-00:00:00,000 --> 00:00:02,358
+00:00:00,000 --> 00:00:02,074
 Neste vídeo, vamos mostrar como é o
 
 2
-00:00:02,458 --> 00:00:05,098
+00:00:02,174 --> 00:00:04,497
 funcionamento de uma árvore de decisão.
 
 3
-00:00:05,700 --> 00:00:09,213
+00:00:05,100 --> 00:00:08,060
 Iremos explicar como ela é criada, como funciona
 
 4
-00:00:09,313 --> 00:00:12,600
+00:00:08,160 --> 00:00:10,929
 e como são calculadas as medidas de impureza.
 
 5
-00:00:15,200 --> 00:00:17,700
+00:00:13,516 --> 00:00:15,657
 Vamos primeiro criar uma pequena base de
 
 6
-00:00:17,800 --> 00:00:20,951
+00:00:15,757 --> 00:00:18,458
 dados para exemplificar o funcionamento da árvore.
 
 7
-00:00:21,566 --> 00:00:25,649
+00:00:19,066 --> 00:00:23,956
 A base de dados é composta por 3 classes: Basquete, Sumô e
 
 8
-00:00:25,749 --> 00:00:30,698
+00:00:24,056 --> 00:00:29,978
 Jockey.Cada classe é representada por um ponto no gráfico, onde o eixo
 
 9
-00:00:30,798 --> 00:00:34,736
+00:00:30,078 --> 00:00:34,796
 horizontal representa o peso e o eixo vertical a altura.
 
 10
-00:00:35,333 --> 00:00:38,703
+00:00:35,383 --> 00:00:39,335
 A partir deste gráfico, vamos criar uma árvore de decisão
 
 11
-00:00:38,803 --> 00:00:42,234
+00:00:39,435 --> 00:00:43,459
 que irá classificar os pontos em suas respectivas classes.
 
 12
-00:00:42,833 --> 00:00:46,591
+00:00:44,050 --> 00:00:47,251
 Vamos começar criando a raiz da árvore. A raiz
 
 13
-00:00:46,691 --> 00:00:50,700
+00:00:47,351 --> 00:00:50,767
 irá classificar os pontos de acordo com a altura.
 
 14
-00:00:51,300 --> 00:00:53,864
+00:00:51,366 --> 00:00:54,740
 Se a altura do ponto for maior que 1 e
 
 15
-00:00:53,964 --> 00:00:56,528
+00:00:54,840 --> 00:00:58,215
 90, o ponto irá para o nó da esquerda.
 
 16
-00:00:57,116 --> 00:01:00,255
+00:00:58,800 --> 00:01:01,651
 Casos contrário, o ponto irá para o da direita.
 
 17
-00:01:00,850 --> 00:01:04,955
+00:01:02,250 --> 00:01:06,355
 No nó da direita, os pontos serão classificados de acordo com o peso.
 
 18
-00:01:05,550 --> 00:01:09,211
+00:01:06,950 --> 00:01:11,212
 Se o peso for maior que 100, o ponto irá para o nó da esquerda.
 
 19
-00:01:09,800 --> 00:01:12,651
+00:01:11,800 --> 00:01:14,207
 Caso contrário, o ponto irá para a direita.
 
 20
-00:01:13,250 --> 00:01:16,002
+00:01:14,800 --> 00:01:17,717
 Após este processo, é possível classificar
 
 21
-00:01:16,102 --> 00:01:18,583
+00:01:17,817 --> 00:01:20,446
 os pontos em suas respectivas classes.
 
 22
-00:01:19,183 --> 00:01:22,682
+00:01:21,033 --> 00:01:25,258
 Os pontos vermelhos são classificados como Basquete, os
 
 23
-00:01:22,782 --> 00:01:25,300
+00:01:25,358 --> 00:01:28,404
 azuis como Sumô e os verdes como Jockey.
 
 24
-00:01:25,900 --> 00:01:29,102
+00:01:29,000 --> 00:01:32,264
 Vimos como é feito a classificação dos pontos em uma
 
 25
-00:01:29,202 --> 00:01:32,722
+00:01:32,364 --> 00:01:35,953
 árvore de decisão. Mas como os parâmetros são escolhidos?
 
 26
-00:01:33,316 --> 00:01:36,142
+00:01:37,550 --> 00:01:40,140
 Isso é feito com base em medidas de impureza.
 
 27
-00:01:36,733 --> 00:01:41,314
+00:01:40,733 --> 00:01:45,489
 As medidas de impureza são utilizadas para calcular a pureza
 
 28
-00:01:41,414 --> 00:01:44,904
+00:01:45,589 --> 00:01:49,211
 dos nós da árvore: quanto mais puro o nó, mais
 
 29
-00:01:45,004 --> 00:01:48,571
+00:01:49,311 --> 00:01:53,015
 homogênea é a classe dos pontos que estão nele.
 
 30
-00:01:51,166 --> 00:01:54,153
+00:01:55,600 --> 00:01:58,558
 Vamos pegar a árvore que criamos anteriormente e
 
 31
-00:01:54,253 --> 00:01:56,918
+00:01:58,658 --> 00:02:01,299
 calcular as medidas de impureza de cada nó.
 
 32
-00:01:57,516 --> 00:02:00,664
+00:02:01,883 --> 00:02:04,696
 No primeiro nó, temos uma proporção igual de
 
 33
-00:02:00,764 --> 00:02:03,764
+00:02:04,796 --> 00:02:07,478
 pontos de cada classe: um terço para cada.
 
 34
-00:02:04,350 --> 00:02:07,319
+00:02:08,066 --> 00:02:10,626
 Porém, conforme descemos na árvore, a proporção
 
 35
-00:02:07,419 --> 00:02:09,343
+00:02:10,726 --> 00:02:12,381
 dos pontos de cada classe muda.
 
 36
-00:02:09,933 --> 00:02:13,373
+00:02:12,966 --> 00:02:16,311
 No segundo nó, todos os pontos são da classe Basquete,
 
 37
-00:02:13,473 --> 00:02:16,651
+00:02:16,411 --> 00:02:19,501
 sendo esse o estado mais puro possível para um nó.
 
 38
-00:02:17,250 --> 00:02:19,630
+00:02:20,100 --> 00:02:22,423
 No terceiro nó, temos uma proporção igual
 
 39
-00:02:19,730 --> 00:02:21,747
+00:02:22,523 --> 00:02:24,493
 de pontos das classes Sumô e Jockey
 
 40
-00:02:22,333 --> 00:02:24,727
+00:02:25,083 --> 00:02:27,430
 Nos últimos nós, todos os pontos são da
 
 41
-00:02:24,827 --> 00:02:27,797
+00:02:27,530 --> 00:02:30,442
 mesma classe, sendo o estado mais puro possível.
 
 42
-00:02:28,383 --> 00:02:31,994
-Assim, é possível reparar que, conforme descemos na
+00:02:31,033 --> 00:02:34,739
+Assim, é possível reparar que, quanto mais descemos
 
 43
-00:02:32,094 --> 00:02:34,395
-árvore, maior é a pureza dos nós.
+00:02:34,839 --> 00:02:37,202
+na árvore, mais puros são os nós.
+
+44
+00:02:38,800 --> 00:02:43,323
+Agora, vamos explicar como são calculadas as medidas de impureza.
+
+45
+00:02:43,916 --> 00:02:47,578
+As medidas de impureza mais comuns são a Entropia e o Gini.
+
+46
+00:02:48,166 --> 00:02:52,174
+A Entropia é uma medida de impureza que mede
+
+47
+00:02:52,274 --> 00:02:57,030
+a aleatoriedade e desordem dos dados. Quanto maior a
+
+48
+00:02:57,130 --> 00:03:01,885
+entropia, mais imprevísiveis e impuros são os dados.
+
+49
+00:03:02,483 --> 00:03:05,309
+A Entropia é calculada pela seguinte fórmula:
+
+50
+00:03:05,900 --> 00:03:09,421
+Onde E é a Entropia, c é o número de classes,
+
+51
+00:03:09,521 --> 00:03:12,800
+e p i é a proporção de pontos da classe i.
+
+52
+00:03:13,400 --> 00:03:16,242
+O Gíni é uma medida de impureza que mede a
+
+53
+00:03:16,342 --> 00:03:21,287
+probabilidade de classificar erroneamente um ponto. Quanto maior o Gíni,
+
+54
+00:03:21,387 --> 00:03:25,420
+maior a probabilidade de classificar erroneamente um ponto.
+
+55
+00:03:26,016 --> 00:03:28,842
+O Gíni é calculado pela seguinte fórmula:
+
+56
+00:03:29,433 --> 00:03:32,675
+Onde G é o Gíni, c é o número de classes,
+
+57
+00:03:32,775 --> 00:03:36,099
+e p i é a proporção de pontos da classe i.
+
+58
+00:03:37,683 --> 00:03:40,845
+Ambas medidas variam de 0 a 1, sendo 0 o
+
+59
+00:03:40,945 --> 00:03:44,270
+estado mais puro e 1 o estado mais impuro.
 
